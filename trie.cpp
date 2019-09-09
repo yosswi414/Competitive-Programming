@@ -114,7 +114,7 @@ string trie::mss(){
 }
 
 /*
-* usage example problem URL (Japanese): https://atcoder.jp/contests/yahoo-procon2017-qual/tasks/yahoo_procon2017_qual_c
+*   Usage example problem URL (Japanese only): https://atcoder.jp/contests/yahoo-procon2017-qual/tasks/yahoo_procon2017_qual_c
 */
 int main(){
   int n,k;
