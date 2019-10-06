@@ -1,5 +1,5 @@
 # Competitive-Programming
 
-Something made during attempts to solve problems and for learning in competitive programming.
+Something made during attempts to solve problems and for learning in competitive programming or programming language.
 
-You can use it as you want.
+Maybe a few library which has nothing to do with competitive programming will be uploaded later.
