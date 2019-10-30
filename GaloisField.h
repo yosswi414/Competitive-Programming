@@ -1,14 +1,9 @@
-/*
-*   Date    : Oct 7 2019
-*   Author  : yosswi414
-*   Note    : 
-*/
+#pragma once
 
-#include <bits/stdc++.h>
+#include <iostream>
 
-using namespace std;
-
-template<typename T, T Order>
+// 位数 Order の有限体 GF(Order)
+template<class T, T Order>
 class GaloisField {
 	T a;
 public:
@@ -17,7 +12,7 @@ public:
 	const T&& value() const { return a; }
 	operator uint_fast64_t() { return a; }
 	GaloisField& operator=(const T x) {
-		a = x % Order;
+		a = (x + (x < 0 ? Order : 0)) % Order;
 		return *this;
 	}
 	GaloisField operator+(const GaloisField b) const {
@@ -49,7 +44,7 @@ public:
 	GaloisField& operator/=(const GaloisField b) {
 		T pow = Order - 2;
 		while (pow) {
-			if (pow & 1) (*this) *= b.a;
+			if (pow & 1)*this *= b.a;
 			b.a *= b.a;
 			pow <<= 1;
 		}
@@ -58,4 +53,11 @@ public:
 	GaloisField operator^(const GaloisField b) const {
 		return a ^ b.a;
 	}
+
 };
+template<class T, T Order>
+std::ostream& operator<<(std::ostream& os, GaloisField<T, Order> n) {
+	uint_fast64_t num = n;
+	os << num;
+	return os;
+}
