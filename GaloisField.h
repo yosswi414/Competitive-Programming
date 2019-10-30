@@ -1,3 +1,9 @@
+/*
+*   Date    : Oct 30 2019
+*   Author  : yosswi414
+*   Note    : 
+*/
+
 #pragma once
 
 #include <iostream>
